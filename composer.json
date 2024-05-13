@@ -1,0 +1,25 @@
+{
+    "name": "amirhajipoor/darkob",
+    "autoload": {
+        "psr-4": {
+            "Amirhajipoor\\Darkob\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Amir Hajipoor",
+            "email": "136118014+amirhajipoor@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amirhajipoor\\Darkob\\DarkobServiceProvider"
+            ]
+        },
+        "aliases": {
+            "Darkob": "Amirhajipoor\\Darkob\\Facades\\Darkob"
+        }
+    }
+}
