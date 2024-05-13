@@ -11,7 +11,9 @@
             "email": "136118014+amirhajipoor@users.noreply.github.com"
         }
     ],
-    "require": {},
+    "require": {
+        "laravel/pint": "^1.15"
+    },
     "extra": {
         "laravel": {
             "providers": [
