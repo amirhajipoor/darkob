@@ -26,6 +26,7 @@ class DarkobServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../resources/lang' => $this->app->langPath('vendor/darkob'),
+            __DIR__.'/../config/darkob.php' => config_path('darkob.php'),
         ]);
     }
 }
