@@ -21,7 +21,7 @@ class Darkob
     public $time;
 
     public $to;
-    
+
     public function __construct()
     {
         $this->driver = config('darkob.default');
@@ -62,9 +62,6 @@ class Darkob
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function sendByPattern(string $pattern): int
     {
         $this->pattern = $pattern;
@@ -90,9 +87,6 @@ class Darkob
         }
     }
 
-    /**
-     * @return int
-     */
     public function send(): int
     {
         if (empty($this->to)) {
@@ -117,8 +111,6 @@ class Darkob
 
     /**
      * Send on specific time
-     * @param Carbon $time
-     * @return int
      */
     public function sendOn(Carbon $time): int
     {

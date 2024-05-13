@@ -12,9 +12,8 @@ class Melipayamak extends Driver
 
     /**
      * Send by pattern
-     * @param string $phone_number
-     * @param int $pattern
-     * @param array $params
+     *
+     * @param  int  $pattern
      */
     public function sendByPattern(string $phone_number, string $pattern, array $params): int
     {
@@ -49,9 +48,6 @@ class Melipayamak extends Driver
 
     /**
      * Send to one person
-     * @param string $from
-     * @param string $phone_number
-     * @param string $text
      */
     public function sendNormal(string $from, string $phone_number, string $text)
     {
@@ -64,8 +60,7 @@ class Melipayamak extends Driver
         $response = $this->client->post('/api/send/simple/'.config('darkob.drivers.melipayamak.key'), [
             'json' => $data,
         ]);
-            
-        
+
         try {
 
             $data = json_decode($response->getBody());
@@ -90,9 +85,6 @@ class Melipayamak extends Driver
 
     /**
      * Send to one person on specific time
-     * @param string $from
-     * @param string $phone_number
-     * @param string $text
      */
     public function sendScheduled(string $from, string $phone_number, string $text, Carbon $time)
     {
@@ -106,7 +98,7 @@ class Melipayamak extends Driver
         $response = $this->client->post('/api/send/schedule/'.config('darkob.drivers.melipayamak.key'), [
             'json' => $data,
         ]);
-            
+
         try {
 
             $data = json_decode($response->getBody());
