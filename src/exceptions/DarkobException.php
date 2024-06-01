@@ -2,6 +2,8 @@
 
 namespace Amirhajipoor\Darkob\Exceptions;
 
-class DarkobException extends \Exception
+use Exception;
+
+class DarkobException extends Exception
 {
 }
