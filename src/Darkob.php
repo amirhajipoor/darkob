@@ -83,7 +83,7 @@ class Darkob
             return (new Melipayamak())->sendByPattern($this->to, $this->pattern, $this->params);
 
         } elseif ($this->driver === 'farazsms') {
-            $this->sendFarazsms();
+            // $this->sendFarazsms();
         }
     }
 
