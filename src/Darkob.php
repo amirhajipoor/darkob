@@ -48,7 +48,7 @@ class Darkob
         return $this;
     }
 
-    public function params(array $params): Darkob
+    public function params(mixed $params): Darkob
     {
         $this->params = $params;
 
@@ -62,7 +62,7 @@ class Darkob
         return $this;
     }
 
-    public function sendByPattern(string $pattern): int
+    public function sendByPattern(string|int $pattern): int
     {
         $this->pattern = $pattern;
         $regex = '/^09\\d{9}$/';

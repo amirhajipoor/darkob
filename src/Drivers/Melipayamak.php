@@ -10,17 +10,14 @@ class Melipayamak extends Driver
 {
     public $base_uri = 'https://console.melipayamak.com/api';
 
-    /**
-     * Send by pattern
-     *
-     * @param  int  $pattern
-     */
-    public function sendByPattern(string $phone_number, string $pattern, array $params): int
+    public function sendByPattern(string $phone_number, string|int $pattern, mixed $params): int
     {
+        $args = is_array($params) ? (string) $params : [(string) $params];
+
         $data = [
             'bodyId' => (int) $pattern,
             'to' => $phone_number,
-            'args' => $params,
+            'args' => $args,
         ];
 
         try {
