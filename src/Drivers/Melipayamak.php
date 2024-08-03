@@ -12,7 +12,7 @@ class Melipayamak extends Driver
 
     public function sendByPattern(string $phone_number, string|int $pattern, mixed $params): int
     {
-        $args = is_array($params) ? array((string) $params[0]) : [(string) $params];
+        $args = is_array($params) ? $params : array((string) $params);
 
         $data = [
             'bodyId' => (int) $pattern,
